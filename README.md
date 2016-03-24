@@ -5,7 +5,7 @@ URI example : idramApp://payment?receiverName=TestName&receiverId=123456789&titl
 
 The following query parameters should be declared.
 
-1. receiverName (required) - e.g "Test Account Name"
+1. receiverName (required) - e.g "Test Account Name" (EDP_REC_ACCOUNT)
 2. receiverId (required) = Receiver's Idram account id. Money will be transferred to this account.
 4. title(required) - Unique id for payment identification of merchant billing. (EDP_BILL_NO)
 4. amount (required)
