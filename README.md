@@ -1,7 +1,7 @@
 # IdramMerchantPayment-Android
 
 Idram app uses custom scheme to accept payment from other apps.
-URI example : idramApp://payment?receiverName=TestName&receiverId=123456789&title=title&amount=1500&tip=15
+URI example : idramapp://payment?receiverName=TestName&receiverId=123456789&title=title&amount=1500&tip=15
 
 The following query parameters should be declared.
 
@@ -45,10 +45,10 @@ Sample Code
 	}
 	
 	private Intent getPaymentIntent(BigDecimal amount, BigDecimal tip) {
-		// e.g idramApp://payment/?receiverName=ggTaxy&receiverId=1234567890&amount=1500&tip=150
+		// e.g idramapp://payment/?receiverName=ggTaxy&receiverId=1234567890&amount=1500&tip=150
 
 		Uri.Builder uriBuilder = new Uri.Builder()
-				.scheme("idramApp")
+				.scheme("idramapp")
 				.authority("payment")
 				.appendQueryParameter("receiverName", RECEIVER_NAME)
 				.appendQueryParameter("receiverId", RECEIVER_ID)
