@@ -7,9 +7,10 @@ The following query parameters should be declared.
 
 1. receiverName (required) - e.g "Test Account Name" (EDP_REC_ACCOUNT)
 2. receiverId (required) = Receiver's Idram account id. Money will be transferred to this account.
-4. title(required) - Unique id for payment identification of merchant billing. (EDP_BILL_NO)
+3. title(required) - Unique id for payment identification of merchant billing. (EDP_BILL_NO)
 4. amount (required)
-5. tip (optional)
+5. has_tip - default value is false (true/false). "has_tip" parameter for show/hide tip field in payment view
+6. tip (optional)
 
 Sample Code
 
@@ -53,7 +54,8 @@ Sample Code
 				.appendQueryParameter("receiverName", RECEIVER_NAME)
 				.appendQueryParameter("receiverId", RECEIVER_ID)
 				.appendQueryParameter("title", TITLE)
-				.appendQueryParameter("amount", amount.toPlainString());
+				.appendQueryParameter("amount", amount.toPlainString()
+				.appendQueryParameter("has_tip", false));
 
 		if (tip != null) {
 			uriBuilder.appendQueryParameter("tip", tip.toPlainString());
